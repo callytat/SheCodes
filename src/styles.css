@@ -86,3 +86,8 @@ h3 {
   color: cornflowerblue;
   list-style: none;
 }
+
+.github-link {
+  font-weight: 500;
+  font-size: 20px;
+}
