@@ -1,4 +1,4 @@
-// Current time & date
+// Display current local time & date
 let now = new Date();
 
 let date = now.getDate();
@@ -66,9 +66,6 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSearch);
-
 function handleSearch(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-text-input").value;
@@ -77,7 +74,7 @@ function handleSearch(event) {
 
 function searchCity(city) {
   let apiKey = "8440d16dc7b02d6a7589879556b1eead";
-  let units = "imperial";
+  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
@@ -87,7 +84,7 @@ function searchLocation(position) {
   let apiKey = "8440d16dc7b02d6a7589879556b1eead";
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let units = "imperial";
+  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
   console.log(apiUrl);
@@ -98,7 +95,38 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+//Unit conversion to/from °C and °F
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+// Global variables
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSearch);
 
 searchCity("Los Angeles");
