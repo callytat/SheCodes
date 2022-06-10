@@ -45,7 +45,7 @@ let showDate = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
 let displayDate = document.querySelector("#current-date");
 displayDate.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
 
-//Display temperature and weather conditions of a city
+//Display temperature and weather conditions of the city entered into search engine
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -64,8 +64,8 @@ searchForm.addEventListener("submit", handleSearch);
 
 function handleSearch(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-text-input").value;
-  searchCity(city);
+  let cityInputElement = document.querySelector("#search-text-input").value;
+  searchCity(citycityInputElement);
 }
 
 function searchCity(city) {
@@ -75,7 +75,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-//Display temperature and weather conditions of the currrent city
+//Display temperature and weather conditions of the city you are currently in
 function searchLocation(position) {
   let apiKey = "8440d16dc7b02d6a7589879556b1eead";
   let latitude = position.coords.latitude;
@@ -93,4 +93,5 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
 searchCity("Los Angeles");
