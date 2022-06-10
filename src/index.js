@@ -40,7 +40,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-let showDate = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
+let showDate = `${hours}:${minutes} ${day}, ${month} ${date}, ${year}`;
 
 let displayDate = document.querySelector("#current-date");
 displayDate.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
