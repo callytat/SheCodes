@@ -71,8 +71,8 @@ function showTemperature(response) {
 
 function handleSearch(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#search-text-input").value;
-  searchCity(citycityInputElement);
+  let city = document.querySelector("#search-text-input").value;
+  searchCity(city);
 }
 
 function searchCity(city) {

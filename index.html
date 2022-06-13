@@ -24,7 +24,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" class="css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
@@ -57,10 +57,11 @@
               <div class="clearfix weather-temperature">
                 <img src="" alt="Clear" id="icon" class="float-left" />
                 <div class="float-left">
-                <strong id="temperature"></strong
+                  <strong id="temperature"></strong
                   ><span class="units"
-                  ><a href="#" id="celsius-link" class="active">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a></span>
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
                 </div>
               </div>
             </div>
@@ -71,101 +72,102 @@
               </ul>
             </div>
           </div>
-          <div class="weather-forecast" id="forecast"></div>
         </div>
-            <br />
-            <br />
+        <br />
+        <br />
+      </div>
+
+      <div class="row-cols-5">
+        <div class="card-group">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Tomorrow <br />
+                  05.13
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-cloud-sun sun-cloud-icon"></i>
+                  <br />
+                  78°F
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="row-cols-5">
-            <div class="card-group">
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Tomorrow <br />
-                      05.13
-                    </h5>
-                    <p class="card-text">
-                      <i class="fa-solid fa-cloud-sun sun-cloud-icon"></i>
-                      <br />
-                      78°F
-                    </p>
-                  </div>
-                </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Saturday <br />
+                  05.14
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-sun sun-icon"></i>
+                  <br />
+                  82°F
+                </p>
               </div>
+            </div>
+          </div>
 
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Saturday <br />
-                      05.14
-                    </h5>
-                    <p class="card-text">
-                      <i class="fa-solid fa-sun sun-icon"></i>
-                      <br />
-                      82°F
-                    </p>
-                  </div>
-                </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Sunday <br />
+                  05.15
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-sun sun-icon"></i>
+                  <br />
+                  84°F
+                </p>
               </div>
+            </div>
+          </div>
 
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Sunday <br />
-                      05.15
-                    </h5>
-                    <p class="card-text">
-                      <i class="fa-solid fa-sun sun-icon"></i>
-                      <br />
-                      84°F
-                    </p>
-                  </div>
-                </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Monday <br />
+                  05.15
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-cloud-sun sun-cloud-icon"></i>
+                  <br />
+                  80°F
+                </p>
               </div>
+            </div>
+          </div>
 
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Monday <br />
-                      05.15
-                    </h5>
-                    <p class="card-text">
-                      <i class="fa-solid fa-cloud-sun sun-cloud-icon"></i>
-                      <br />
-                      80°F
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Tuesday <br />
-                      05.15
-                    </h5>
-                    <p class="card-text">
-                      <i class="fa-solid fa-sun sun-icon"></i>
-                      <br />
-                      86°F
-                    </p>
-                  </div>
-                </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Tuesday <br />
+                  05.15
+                </h5>
+                <p class="card-text">
+                  <i class="fa-solid fa-sun sun-icon"></i>
+                  <br />
+                  86°F
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
       <br />
-      <a href="https://github.com/callytat/SheCodes" target="_blank"
+      <a
+        href="https://github.com/callytat/SheCodes"
+        target="_blank"
+        class="link"
         >Open-source code</a
-      >by Cally Tat
+      >
+      by Cally Tat
     </div>
     <script src="src/index.js"></script>
   </body>
