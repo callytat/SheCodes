@@ -32,21 +32,33 @@
       <div class="card">
         <div class="card-body">
           <form id="search-form">
-            <input
-              type="search"
-              placeholder="Enter city name"
-              autofocus="on"
-              id="search-text-input"
-            />
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  placeholder="Enter city name"
+                  autofocus="on"
+                  id="search-text-input"
+                />
+              </div>
 
-            <input type="submit" value="Search" class="btn btn-primary" />
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
 
-            <input
-              type="submit"
-              value="Current Location"
-              id="current-location-button"
-              class="btn btn-success current-location-button"
-            />
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Current Location"
+                  id="current-location-button"
+                  class="btn btn-success current-location-button w-100"
+                />
+              </div>
+            </div>
           </form>
 
           <h1>Last updated: <span id="current-date"></span></h1>
