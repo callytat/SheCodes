@@ -98,18 +98,6 @@ li {
   font-size: 22px;
 }
 
-.sun-icon {
-  color: yellow;
-  font-size: 40px;
-  padding: 30px;
-}
-
-.sun-cloud-icon {
-  color: gray;
-  font-size: 40px;
-  padding: 30px;
-}
-
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
