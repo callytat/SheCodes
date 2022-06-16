@@ -87,17 +87,6 @@ li {
   width: 100%;
 }
 
-.card-title {
-  color: #bbded6;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.card-text {
-  font-weight: 900;
-  font-size: 22px;
-}
-
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
